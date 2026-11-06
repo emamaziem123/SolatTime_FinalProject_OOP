@@ -1,0 +1,363 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: rgb(48, 48, 48);
+    margin: 0;
+    padding: 0;
+}
+
+/* STICKY HEADER */
+.stickyHeader {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* HEADER */
+.appHeader {
+    background-color: rgb(33, 33, 33);
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin: 0;
+    border-radius: 0;
+}
+
+h1 {
+    color: rgb(100, 214, 119);
+    font-size: 42px;
+    margin: 0 0 8px;
+}
+
+.subtitle {
+    color: whitesmoke;
+    font-size: 17px;
+    margin: 0;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: rgb(245, 247, 245);
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav button {
+    background-color: rgb(215, 255, 208);
+    color: black;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 22px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: rgb(100, 214, 119);
+    color: white;
+}
+
+/* MAIN PAGE CONTENT */
+#firstPage,
+#secondPage {
+    padding: 20px 25px;
+}
+
+/* DATE AND LOCATION */
+#currentDate {
+    text-align: center;
+    font-size: 17px;
+    color: #555555;
+    margin: 20px 0;
+}
+
+#location {
+    max-width: 750px;
+    margin: 20px auto 30px;
+    padding: 22px;
+    background-color: #f5f7f5;
+    border: 1px solid #e0e8e0;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#selectedLocation {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    color: #218838;
+    margin: 0 0 8px;
+}
+
+#location label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#cityInput,
+#countryInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+    background-color: white;
+}
+
+#cityInput:focus,
+#countryInput:focus {
+    border-color: #218838;
+    box-shadow: 0 0 0 3px rgba(33, 136, 56, 0.12);
+}
+
+#loadLocationButton {
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding: 11px 25px;
+    background-color: #218838;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#loadLocationButton:hover {
+    background-color: #176b2c;
+}
+
+/* MAIN CONTAINERS */
+.container {
+    max-width: 650px;
+    margin: 25px auto;
+    background-color: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    color: #292929;
+    margin-top: 0;
+    font-size: 25px;
+}
+
+/* PRAYER TIMES */
+#status {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 18px;
+}
+
+.prayerCard {
+    background-color: #f5f7f5;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prayerName {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.prayerTime {
+    color: #218838;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* NEXT PRAYER COUNTDOWN */
+.nextprayercontainer {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 15px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+#nextPrayer {
+    font-weight: bold;
+    font-size: 25px;
+    color: #218838;
+}
+
+#countdown {
+    font-size: 25px;
+    font-weight: bold;
+    color: #292929;
+}
+
+/* SUGGESTED ACTIVITY */
+#suggestion {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+#addSuggestionButton,
+#addReminderButton {
+    padding: 11px 15px;
+    background-color: #218838;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#addSuggestionButton:hover,
+#addReminderButton:hover {
+    background-color: #176b2c;
+}
+
+#addSuggestionButton {
+    background-color: #aaaaaa;
+    cursor: not-allowed;
+}
+
+#suggestionStatus {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* PRAYER PLANNER FORM */
+.reminderForm {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#reminderInput,
+#reminderPrayer {
+    width: 100%;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#reminderStatus {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* FIVE PRAYER COMPARTMENTS */
+#prayerReminderSections {
+    margin-top: 25px;
+}
+
+.prayerReminderSection {
+    background-color: #f5f7f5;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.prayerReminderSection h3 {
+    color: #218838;
+    margin: 0 0 12px;
+    font-size: 19px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 10px;
+}
+
+.prayerReminderList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reminderItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.reminderText {
+    flex: 1;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+.emptyReminder {
+    color: #888888;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+/* UPDATE AND DELETE BUTTONS */
+.updateButton,
+.deleteButton {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.updateButton {
+    background-color: #218838;
+    color: white;
+}
+
+.deleteButton {
+    background-color: #610000;
+    color: white;
+}
+
+.updateButton:hover {
+    background-color: #176b2c;
+}
+
+.deleteButton:hover {
+    background-color: #3a0000;
+}
+
+/* EDITING AN ACTIVITY */
+.editing {
+    flex-wrap: wrap;
+}
+
+.editReminderInput,
+.editPrayerSelect {
+    padding: 9px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    min-width: 0;
+}
+
+.editReminderInput {
+    flex: 2;
+}
+
+.editPrayerSelect {
+    flex: 1;
+}

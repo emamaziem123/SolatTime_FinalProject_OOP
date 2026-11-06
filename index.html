@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolatTime</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stickyHeader">
+        <div class="appHeader">
+            <h1>SolatTime</h1>
+            <p class="subtitle">Your Daily Prayer Time Companion</p>
+        </div>
+
+        <nav>
+            <button id="firstPageButton">Prayer Times</button>
+            <button id="secondPageButton">Prayer Planner</button>
+        </nav>
+    </div>
+
+    <!-- PAGE 1 -->
+    <div id="firstPage">
+        <p id="currentDate"></p>
+        <div id="location">
+            <p id="selectedLocation"></p>
+            <label for="cityInput">City:</label>
+            <input type="text" id="cityInput" placeholder="Enter city">
+            
+            <label for="countryInput">Country:</label>
+            <input type="text" id="countryInput" placeholder="Enter country">
+
+            <button id="loadLocationButton">Load Prayer Times</button>
+        </div>
+
+        <div class="container">
+            <h2>Today's Prayer Times</h2>
+            <p id="status"></p>
+            <div class="prayerCard">
+                <span class="prayerName">Imsak</span>
+                <span class="prayerTime" id="imsak">Loading...</span>
+            </div>
+            <div class="prayerCard">
+                <span class="prayerName">Fajr</span>
+                <span class="prayerTime" id="fajr">Loading...</span>
+            </div>
+            <div class="prayerCard">
+                <span class="prayerName">Sunrise</span>
+                <span class="prayerTime" id="sunrise">Loading...</span>
+            </div>
+            <div class="prayerCard">
+                <span class="prayerName">Dhuhr</span>
+                <span class="prayerTime" id="dhuhr">Loading...</span>
+            </div>
+            <div class="prayerCard">
+                <span class="prayerName">Asr</span>
+                <span class="prayerTime" id="asr">Loading...</span>
+            </div>
+            <div class="prayerCard">
+                <span class="prayerName">Maghrib</span>
+                <span class="prayerTime" id="maghrib">Loading...</span>
+            </div>
+            <div class="prayerCard">
+                <span class="prayerName">Isha</span>
+                <span class="prayerTime" id="isha">Loading...</span>
+            </div>
+        </div>
+
+        <div class="nextprayercontainer">
+            <p id="nextPrayer">Loading...</p>
+            <p id="countdown">--:--:--</p>
+        </div>
+
+        <div class="container">
+            <h2>Suggested Activity</h2>
+            <p id="suggestion">Waiting for prayer times...</p>
+            <button id="addSuggestionButton">
+                Add to Prayer Planner
+            </button>
+            <p id="suggestionStatus"></p>
+        </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div id="secondPage" style="display: none;">
+        <div class="container">
+            <h2>Prayer Planner</h2>
+            <p>
+                Organise your personal activities and reminders
+                according to the five daily prayers.
+            </p>
+            <div class="reminderForm">
+                <input type="text" id="reminderInput" placeholder="Enter an activity or reminder">
+                <select id="reminderPrayer">
+                    <option value="Fajr">Fajr</option>
+                    <option value="Dhuhr">Dhuhr</option>
+                    <option value="Asr">Asr</option>
+                    <option value="Maghrib">Maghrib</option>
+                    <option value="Isha">Isha</option>
+                </select>
+                <button id="addReminderButton">Add Activity</button>
+            </div>
+            <p id="reminderStatus"></p>
+            <div id="prayerReminderSections"></div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
