@@ -261,7 +261,7 @@ function editReminders(index, li) {
 
             reminderStatus.textContent = "Activity updated successfully!"
         } else {
-            reminderStatus.textContent = "Activity cannot be empty."
+            reminderStatus.textContent = "Input cannot be empty."
         }
     }
     //cancel button to cancel the edited reminder/activity
